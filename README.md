@@ -69,10 +69,12 @@ The contradicted results between MAUVE and human evaluations reveal that MAUVE d
 <span id='environment_setup'/>
 
 #### 2. Environment Setup: <a href='#all_catelogue'>[Back to Top]</a>
+__The simctg is using an old version scikit-learn as its dependency, this needs to be fixed by setting up an ENV flag"
 Before running the experiments, please setup the environment as
 ```yaml
 pip install torch
-pip install simctg --upgrade
+# pip install simctg --upgrade
+SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True pip install simctg
 pip install mauve-text
 pip install "transformers>=4.24.0"
 ```
@@ -207,9 +209,9 @@ The arguments are as follows:
 ###### 5.2.1. Diversity and MAUVE:
 To evaluate the diversity and MAUVE results of contrastive search, please run the following commands:
 ```yaml
-cd ./scripts/
-chmod +x ./measure_mauve.sh
-./measure_mauve.sh
+cd scripts/
+chmod +x measure_mauve.sh
+measure_mauve.sh
 ```
 
 The argument is as follows:
@@ -223,9 +225,9 @@ The argument is as follows:
 ###### 5.2.2. Coherence:
 To evaluate the coherence of the baseline methods, please run the following commands:
 ```yaml
-cd ./scripts/
-chmod +x ./measure_coherence.sh
-./measure_coherence.sh
+cd scripts/
+chmod +xn nmeasure_coherence.sh
+measure_coherence.sh
 ```
 
 The arguments are as follows:
