@@ -210,8 +210,8 @@ The arguments are as follows:
 To evaluate the diversity and MAUVE results of contrastive search, please run the following commands:
 ```yaml
 cd scripts/
-chmod +x measure_mauve.sh
-measure_mauve.sh
+chmod +x measure_slow_mauve.sh
+measure_slow_mauve.sh
 ```
 
 The argument is as follows:
@@ -226,8 +226,8 @@ The argument is as follows:
 To evaluate the coherence of the baseline methods, please run the following commands:
 ```yaml
 cd scripts/
-chmod +xn nmeasure_coherence.sh
-measure_coherence.sh
+chmod +x measure_slow_coherence.sh
+measure_slow_coherence.sh
 ```
 
 The arguments are as follows:
